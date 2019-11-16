@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Kick
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 4087401ef7d0e4cd09c07796ebae9be4, type: 3}
+    - time: 0.041666668
+      value: {fileID: 21300000, guid: fd7913ceb50da4ab198caef892289999, type: 3}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: 37b0db27d8c214904ae13065cf8a607b, type: 3}
+    - time: 0.125
+      value: {fileID: 21300000, guid: 94af372a30eea41489e783b66794d36d, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 759565f00807743799b2fa27f7e96087, type: 3}
+    - time: 0.20833333
+      value: {fileID: 21300000, guid: feb9baec07f72441d8aa1624e708786a, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: f167500b41fc94c18ba182a4d0b0a07a, type: 3}
+    - time: 0.29166666
+      value: {fileID: 21300000, guid: 714f6350199044befa4b7fb467dcd66f, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: 71874254cae64432f85a151ca1e5933f, type: 3}
+    - time: 0.375
+      value: {fileID: 21300000, guid: dc4fe7b5b423747f280ae2956b76e912, type: 3}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: 457565466d7434dd79ced827fde245e5, type: 3}
+    - time: 0.45833334
+      value: {fileID: 21300000, guid: 480a45ca75c1544f6b245f96d009b21a, type: 3}
+    - time: 0.5
+      value: {fileID: 21300000, guid: ca5a01cca0fbd4d0db0b55828400d01a, type: 3}
+    - time: 0.5416667
+      value: {fileID: 21300000, guid: cc9f60ff5d98e4fcd8e93757b298bfb5, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 24
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: 4087401ef7d0e4cd09c07796ebae9be4, type: 3}
+    - {fileID: 21300000, guid: fd7913ceb50da4ab198caef892289999, type: 3}
+    - {fileID: 21300000, guid: 37b0db27d8c214904ae13065cf8a607b, type: 3}
+    - {fileID: 21300000, guid: 94af372a30eea41489e783b66794d36d, type: 3}
+    - {fileID: 21300000, guid: 759565f00807743799b2fa27f7e96087, type: 3}
+    - {fileID: 21300000, guid: feb9baec07f72441d8aa1624e708786a, type: 3}
+    - {fileID: 21300000, guid: f167500b41fc94c18ba182a4d0b0a07a, type: 3}
+    - {fileID: 21300000, guid: 714f6350199044befa4b7fb467dcd66f, type: 3}
+    - {fileID: 21300000, guid: 71874254cae64432f85a151ca1e5933f, type: 3}
+    - {fileID: 21300000, guid: dc4fe7b5b423747f280ae2956b76e912, type: 3}
+    - {fileID: 21300000, guid: 457565466d7434dd79ced827fde245e5, type: 3}
+    - {fileID: 21300000, guid: 480a45ca75c1544f6b245f96d009b21a, type: 3}
+    - {fileID: 21300000, guid: ca5a01cca0fbd4d0db0b55828400d01a, type: 3}
+    - {fileID: 21300000, guid: cc9f60ff5d98e4fcd8e93757b298bfb5, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 0.5833334
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events:
+  - time: 0
+    functionName: LimitMoveOnAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.20833333
+    functionName: EnableLightAttackTrigger
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.45833334
+    functionName: DisableAttackTrigger
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5416667
+    functionName: FreeMovement
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
