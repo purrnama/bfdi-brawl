@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-landing-title: 'Battle for BFDI's biggest crowd-sourced game'
+landing-title: null
 description: null
 image: null
 author: null
