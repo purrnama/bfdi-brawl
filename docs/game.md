@@ -1,7 +1,7 @@
 ---
-layout: allposts
-title: All posts
-landing-title: 'All posts'
+layout: game
+title: Play the game
+landing-title: 'Game'
 nav-menu: true
 description: null
 image: null
