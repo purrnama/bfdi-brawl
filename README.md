@@ -1,5 +1,5 @@
 # Welcome to Battle for BFDI Battle!
-This place is the heart of the BFBB development.
+This place is the heart of the BFBB development. Note that the current version is still unstable and virtually unplayable.
 
 ## Playing the game?
 For your convenience, BFBB will be available as a WebGL version in its own website. It will be ready in a couple of months, and soon you'll be able to play it right on your web browser!
