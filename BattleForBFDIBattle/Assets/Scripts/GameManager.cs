@@ -140,6 +140,12 @@ public class GameManager : MonoBehaviour {
 			Debug.Log("BattleSceneID: No skybox found.");
 		}
 
+		if(battleSceneID.fogColor != null){
+			RenderSettings.fogColor = battleSceneID.fogColor;
+		}else{
+			Debug.Log("BattleSceneID: No fog colour found");
+		}
+
 		if(battleSceneID.postProcessing != null){
 			postProcess.profile = battleSceneID.postProcessing;
 		}else{

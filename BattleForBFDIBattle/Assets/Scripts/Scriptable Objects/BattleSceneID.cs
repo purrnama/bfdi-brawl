@@ -14,6 +14,7 @@ public class BattleSceneID : ScriptableObject
     public AudioClip music = null;
     public PostProcessProfile postProcessing = null;
     public Material skybox = null;
+    public Color fogColor = new Color(0f, 0f, 0f, 255f); 
 
     [Header("Arena Bounds")]
     public float boundsUp = 0f;
