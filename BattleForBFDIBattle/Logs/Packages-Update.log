@@ -53,3 +53,11 @@ The following packages were updated:
   com.unity.package-manager-ui from version 2.1.2 to 2.2.0
   com.unity.textmeshpro from version 2.0.0 to 2.0.1
   com.unity.timeline from version 1.0.0 to 1.1.0
+
+=== Mon Dec  9 00:01:22 2019
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.ide.vscode from version 1.1.2 to 1.1.3
