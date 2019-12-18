@@ -46,4 +46,33 @@ public class Character_ID : ScriptableObject {
 	public AudioClip[] deathSounds;
 	public AudioClip[] blockSounds;
 
+	[Header("Character Attributes (Experimental)")]
+
+	[Tooltip("The max side speed of a character on the ground.")]
+	public float walkSpeed = 0f;
+
+	[Tooltip("How fast a character moves sideways on the ground.")]
+	public float walkAcceleration = 0f;
+
+	[Tooltip("How fast a character moves sideways in the air.")]
+	public float airAcceleration = 0f;
+
+	[Tooltip("How long it takes for a character to stop moving sideways in the air.")]
+	public float airFriction = 0f;
+
+	[Tooltip("The max side speed of a character in the air.")]
+	public float airSpeed = 0f;
+
+	[Tooltip("The max jump height for a character.")]
+	public float jumpHeight = 0f;
+
+	[Tooltip("How fast a character falls.")]
+	public float gravity = 0f;
+	
+	[Tooltip("How long it takes for a charcter to stop moving sideways on the ground.")]
+	public float traction = 0f;
+	
+	[Tooltip("How much a character can resist knockback.")]
+	public float weight = 0f;
+
 }
