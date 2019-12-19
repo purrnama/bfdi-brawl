@@ -10,18 +10,23 @@ public class PlayerMovement_new : MonoBehaviour
     public Transform groundCheck;
     bool isGrounded;
     bool isDashed;
+    int jumpsMade = 0;
     public float groundDistance;
     public LayerMask groundMask;
     public Character_ID characterID;
-    public float tapSpeed;
-    float lastTapTime = 0;
-    float lastTapValue = 0;
+    public float tapMoveSpeed;
+    float lastTapMoveTime = 0;
+    float lastTapMoveValue = 0;
+    float jumpRate;
+    float nextJumpTime = 0f;
 
     //Character Attributes
     float walkAcceleration, jumpHeight, gravity, airAcceleration, airFriction, airSpeed, traction;
+    int maxJumps;
 
     void Start()
     {
+        //Get attributes from CharacterID
         charControl = gameObject.GetComponent<CharacterController>();
         walkAcceleration = characterID.walkAcceleration;
         jumpHeight = characterID.jumpHeight;
@@ -30,31 +35,36 @@ public class PlayerMovement_new : MonoBehaviour
         airSpeed = characterID.airSpeed;
         airFriction = characterID.airFriction;
         traction = characterID.traction;
+        maxJumps = characterID.maxJumps;
+        jumpRate = characterID.jumpRate;
 
-        if (gravity > 0){ //Check if gravity is positive by mistake
+        //Check if gravity is positive by mistake
+        if (gravity > 0){
             gravity = (gravity) - (gravity * 2);
         }
     }
 
     void Update()
     {
+        //Checks for ground
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && verticalVelocity.y < 0){
             verticalVelocity.y = -2f;
+            jumpsMade = 0; // Reset jumps
         }
 
+        //Store movement inputs
         float x = Input.GetAxis("horizontal");
         float y = Input.GetAxis("vertical");
 
         if(Input.GetButtonDown("horizontal")){
-            Debug.Log("pressed");
-            if((Time.time - lastTapTime) < tapSpeed && lastTapValue == Input.GetAxisRaw("horizontal") && isGrounded){
+            if((Time.time - lastTapMoveTime) < tapMoveSpeed && lastTapMoveValue == Input.GetAxisRaw("horizontal") && isGrounded){
                 isDashed = true;
-                Debug.Log("double pressed");
+                Debug.Log("Dash");
             }
-            lastTapValue = Input.GetAxisRaw("horizontal");
-            lastTapTime = Time.time;
+            lastTapMoveValue = Input.GetAxisRaw("horizontal");
+            lastTapMoveTime = Time.time;
         }
 
         if(x != 0){
@@ -76,13 +86,33 @@ public class PlayerMovement_new : MonoBehaviour
             }
         charControl.Move(horizontalVelocity * Time.deltaTime);
 
-        if(Input.GetButtonDown("jump") && isGrounded){
-            verticalVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        //Jump mechanism
+        if(Input.GetButtonDown("jump")){
+            
+            if(Time.time >= nextJumpTime){ // Prevent spamming
+                Jump();
+                nextJumpTime = Time.time +(1f / jumpRate);
+            }
         }
+
         if(verticalVelocity.y > -airSpeed){
             verticalVelocity.y += gravity * Time.deltaTime;
         }
 
         charControl.Move(verticalVelocity * Time.deltaTime);
+    }
+    void Jump(){
+
+        if(isGrounded){// We're grounded, so we can jump.
+            verticalVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            jumpsMade += 1;
+            Debug.Log("Ground Jump");
+        }else{// We're not on the ground, check if we can jump again.
+            if(jumpsMade < maxJumps){
+                verticalVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                jumpsMade += 1;
+                Debug.Log("Air Jump");
+            }
+        }
     }
 }

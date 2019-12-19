@@ -48,8 +48,10 @@ MonoBehaviour:
   walkAcceleration: 7
   airAcceleration: 5
   airFriction: 2
-  airSpeed: 16
+  airSpeed: 24
   jumpHeight: 7
-  gravity: 36
+  gravity: 42
   traction: 10
   weight: 1
+  maxJumps: 2
+  jumpRate: 4

@@ -75,4 +75,10 @@ public class Character_ID : ScriptableObject {
 	[Tooltip("How much a character can resist knockback.")]
 	public float weight = 0f;
 
+	[Tooltip("How many jumps can this character make while airbourne.")]
+	public int maxJumps = 1;
+
+	[Tooltip("How fast can a character jump in a second.")]
+	public float jumpRate = 1;
+
 }
