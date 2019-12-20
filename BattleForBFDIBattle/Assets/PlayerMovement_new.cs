@@ -7,7 +7,8 @@ public class PlayerMovement_new : MonoBehaviour
     CharacterController charControl;
     Vector3 verticalVelocity;
     Vector3 horizontalVelocity;
-    public Transform groundCheck;
+    Transform groundCheck;
+    float x, y;
     bool isGrounded;
     bool isDashed;
     int jumpsMade = 0;
@@ -19,29 +20,76 @@ public class PlayerMovement_new : MonoBehaviour
     float lastTapMoveValue = 0;
     float jumpRate;
     float nextJumpTime = 0f;
+    public LayerMask opponentLayers;
+    float attackRange = 0.5f;
+    Transform attackPoint;
 
     //Character Attributes
-    float walkAcceleration, jumpHeight, gravity, airAcceleration, airFriction, airSpeed, traction;
+    float walkAcceleration, jumpHeight, gravity, airAcceleration, airFriction, airSpeed, traction, dashAcceleration;
     int maxJumps;
+    bool isJumpingSnapped;
 
     void Start()
     {
-        //Get attributes from CharacterID
-        charControl = gameObject.GetComponent<CharacterController>();
-        walkAcceleration = characterID.walkAcceleration;
-        jumpHeight = characterID.jumpHeight;
-        gravity = characterID.gravity;
-        airAcceleration = characterID.airAcceleration;
-        airSpeed = characterID.airSpeed;
-        airFriction = characterID.airFriction;
-        traction = characterID.traction;
-        maxJumps = characterID.maxJumps;
-        jumpRate = characterID.jumpRate;
+        if(characterID == null){
+            Debug.LogError("No characterID found.");
+            return;
+        }else{
 
-        //Check if gravity is positive by mistake
-        if (gravity > 0){
-            gravity = (gravity) - (gravity * 2);
+            //Get attributes from CharacterID
+            charControl = gameObject.GetComponent<CharacterController>();
+            walkAcceleration = characterID.walkAcceleration;
+            jumpHeight = characterID.jumpHeight;
+            gravity = characterID.gravity;
+            airAcceleration = characterID.airAcceleration;
+            airSpeed = characterID.airSpeed;
+            airFriction = characterID.airFriction;
+            traction = characterID.traction;
+            maxJumps = characterID.maxJumps;
+            jumpRate = characterID.jumpRate;
+            isJumpingSnapped = characterID.isJumpingSnapped;
+            dashAcceleration = characterID.dashAcceleration;
+            groundCheck = transform.GetChild(0);
+            attackPoint = transform.GetChild(1);
+
+            //Check if gravity is positive by mistake
+            if (gravity > 0){
+                gravity = (gravity) - (gravity * 2);
+                Debug.LogWarning("Gravity value in " + characterID.characterName + "'s CharacterID is positive. It is flipped automatically, but consider making it negative");
+            }
         }
+    }
+
+    public void Reset(){
+        if(characterID == null){
+        }else{
+
+            //Get attributes from CharacterID
+            charControl = gameObject.GetComponent<CharacterController>();
+            walkAcceleration = characterID.walkAcceleration;
+            jumpHeight = characterID.jumpHeight;
+            gravity = characterID.gravity;
+            airAcceleration = characterID.airAcceleration;
+            airSpeed = characterID.airSpeed;
+            airFriction = characterID.airFriction;
+            traction = characterID.traction;
+            maxJumps = characterID.maxJumps;
+            jumpRate = characterID.jumpRate;
+            isJumpingSnapped = characterID.isJumpingSnapped;
+            dashAcceleration = characterID.dashAcceleration;
+            groundCheck = transform.GetChild(0);
+            attackPoint = transform.GetChild(1);
+
+            //Check if gravity is positive by mistake
+            if (gravity > 0){
+                gravity = (gravity) - (gravity * 2);
+                Debug.LogWarning("Gravity value in " + characterID.characterName + "'s CharacterID is positive. It is flipped automatically, but consider making it negative");
+            }
+        }
+        horizontalVelocity = Vector3.zero;
+        verticalVelocity = Vector3.zero;
+        transform.position = new Vector3(0f, 7.6f, 0f);
+        Debug.Log("Player reset");
     }
 
     void Update()
@@ -55,23 +103,17 @@ public class PlayerMovement_new : MonoBehaviour
         }
 
         //Store movement inputs
-        float x = Input.GetAxis("horizontal");
-        float y = Input.GetAxis("vertical");
+        x = Input.GetAxis("horizontal");
+        y = Input.GetAxis("vertical");
 
-        if(Input.GetButtonDown("horizontal")){
-            if((Time.time - lastTapMoveTime) < tapMoveSpeed && lastTapMoveValue == Input.GetAxisRaw("horizontal") && isGrounded){
-                isDashed = true;
-                Debug.Log("Dash");
-            }
-            lastTapMoveValue = Input.GetAxisRaw("horizontal");
-            lastTapMoveTime = Time.time;
-        }
 
         if(x != 0){
             if(isGrounded){
                 horizontalVelocity = Vector3.right * x * walkAcceleration;
-            }else{
-                horizontalVelocity = Vector3.right * x * airAcceleration;
+            }else{ // Inherits velocity from ground, limited by air speed
+                if(horizontalVelocity.x < airSpeed && horizontalVelocity.x > -airSpeed){
+                    horizontalVelocity += Vector3.right * x * airAcceleration * Time.deltaTime;
+                }
             }
         }else{
             if(isGrounded){
@@ -82,10 +124,17 @@ public class PlayerMovement_new : MonoBehaviour
             isDashed = false;
         }
             if(isDashed && isGrounded){
-                horizontalVelocity.x *= 2f;
+                horizontalVelocity = Vector3.right * x * dashAcceleration;
             }
-        charControl.Move(horizontalVelocity * Time.deltaTime);
-
+        //Dash mechanism
+        if(Input.GetButtonDown("horizontal")){
+            if((Time.time - lastTapMoveTime) < tapMoveSpeed && lastTapMoveValue == Input.GetAxisRaw("horizontal") && isGrounded){
+                isDashed = true;
+                Debug.Log("Dash");
+            }
+            lastTapMoveValue = Input.GetAxisRaw("horizontal");
+            lastTapMoveTime = Time.time;
+        }
         //Jump mechanism
         if(Input.GetButtonDown("jump")){
             
@@ -99,20 +148,55 @@ public class PlayerMovement_new : MonoBehaviour
             verticalVelocity.y += gravity * Time.deltaTime;
         }
 
+        charControl.Move(horizontalVelocity * Time.deltaTime);
         charControl.Move(verticalVelocity * Time.deltaTime);
     }
     void Jump(){
-
+        isDashed = false;
         if(isGrounded){// We're grounded, so we can jump.
             verticalVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             jumpsMade += 1;
             Debug.Log("Ground Jump");
+                if(isJumpingSnapped){
+                    if(horizontalVelocity.x < 0 && Input.GetAxisRaw("horizontal") > 0){
+                        horizontalVelocity.x = Mathf.Abs(horizontalVelocity.x);
+                        Debug.Log("Jump snapped");
+                    }
+                    if(horizontalVelocity.x > 0 && Input.GetAxisRaw("horizontal") < 0){
+                        horizontalVelocity.x = horizontalVelocity.x - (horizontalVelocity.x * 2);
+                        Debug.Log("Jump snapped");
+                    }
+                }else{
+                    horizontalVelocity.x /= 2f;
+                }
         }else{// We're not on the ground, check if we can jump again.
             if(jumpsMade < maxJumps){
                 verticalVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 jumpsMade += 1;
                 Debug.Log("Air Jump");
+                if(isJumpingSnapped){
+                    if(horizontalVelocity.x < 0 && Input.GetAxisRaw("horizontal") > 0){
+                        horizontalVelocity.x = (Mathf.Abs(horizontalVelocity.x)) / 2f;
+                        Debug.Log("Jump snapped");
+                    }
+                    if(horizontalVelocity.x > 0 && Input.GetAxisRaw("horizontal") < 0){
+                        horizontalVelocity.x = (horizontalVelocity.x - (horizontalVelocity.x * 2f)) / 2f;
+                        Debug.Log("Jump snapped");
+                    }
+                }else{
+                    horizontalVelocity.x /= 2f;
+                }
             }
+    }
+
+    void Attack(){
+
+        Collider[] hitOpponents = Physics.OverlapSphere(attackPoint.position, attackRange, opponentLayers);
+
+        foreach(Collider opponent in hitOpponents){
+            Debug.Log("Hit " + opponent.name);
+        }
+
         }
     }
 }

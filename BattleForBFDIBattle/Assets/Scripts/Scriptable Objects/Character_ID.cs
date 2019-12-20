@@ -81,4 +81,13 @@ public class Character_ID : ScriptableObject {
 	[Tooltip("How fast can a character jump in a second.")]
 	public float jumpRate = 1;
 
+	[Tooltip("Distance of effective attack from the player. Specify horizontal and vertical distance.")]
+	public Vector2 attackDistance = Vector2.zero;
+
+	[Tooltip("How fast a character dashes on the ground.")]
+	public float dashAcceleration = 0f;
+
+	[Tooltip("Does jumping towards opposite direction snaps the velocity to that direction in the air?")]
+	public bool isJumpingSnapped = false;
+
 }

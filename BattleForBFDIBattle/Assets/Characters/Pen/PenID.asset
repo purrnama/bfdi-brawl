@@ -46,12 +46,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8554af1ec965a455093dfcc80a78d644, type: 3}
   walkSpeed: 7
   walkAcceleration: 7
-  airAcceleration: 5
+  airAcceleration: 24
   airFriction: 2
   airSpeed: 24
   jumpHeight: 7
-  gravity: 42
-  traction: 10
+  gravity: 48
+  traction: 15
   weight: 1
   maxJumps: 2
   jumpRate: 4
+  attackDistance: {x: 0, y: 0}
+  dashAcceleration: 14
+  isJumpingSnapped: 1
