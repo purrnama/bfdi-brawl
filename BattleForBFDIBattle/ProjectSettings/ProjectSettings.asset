@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: SmolPadok
-  productName: Battle for BFDI Battle 0.1B
+  productName: Battle for BFDI Battle
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -120,7 +120,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  bundleVersion: 0.1B
+  bundleVersion: 0.01A
   preloadedAssets:
   - {fileID: 102900000, guid: 193b0bd267e6e4e4887650e4738c554c, type: 3}
   - {fileID: 102900000, guid: d1fccf2e926027c4a84f0e159780a164, type: 3}
@@ -394,7 +394,7 @@ PlayerSettings:
     m_StaticBatching: 1
     m_DynamicBatching: 0
   - m_BuildTarget: WebGL
-    m_StaticBatching: 0
+    m_StaticBatching: 1
     m_DynamicBatching: 0
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: AndroidPlayer
