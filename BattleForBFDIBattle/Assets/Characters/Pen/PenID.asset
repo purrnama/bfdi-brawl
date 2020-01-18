@@ -50,11 +50,32 @@ MonoBehaviour:
   airFriction: 2
   airSpeed: 24
   jumpHeight: 7
-  gravity: 48
+  gravity: 58
   traction: 15
   weight: 1
+  knockbackScaling: 110
   maxJumps: 2
-  jumpRate: 4
-  attackDistance: {x: 0, y: 0}
+  jumpRate: 5
+  attackRate: 4
+  attackDistance: {x: 2, y: 2.2}
+  attackRange: 1.2
   dashAcceleration: 14
   isJumpingSnapped: 1
+  jabDamage: 0.8
+  jabAngle: 0.4
+  nAirDamage: 1.2
+  nAirAngle: 1
+  fSmashDamage: 8
+  fSmashAngle: 1.1
+  fDashDamage: 7
+  fDashAngle: 1
+  fAirDamage: 2
+  fAirAngle: 1.2
+  uSmashDamage: 3
+  uSmashAngle: 0.07
+  uAirDamage: 2.5
+  uAirAngle: 0.1
+  dSmashDamage: 2
+  dSmashAngle: 1
+  dAirDamage: 2.2
+  dAirAngle: 2

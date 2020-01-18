@@ -23,11 +23,11 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Ground
   - Player
-  - 
-  - 
-  - 
+  - Hard Platform
+  - Semisoft Platform
+  - Soft Platform
+  - Supersoft Platform
   - 
   - 
   - 
