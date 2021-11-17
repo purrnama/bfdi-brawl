@@ -1,0 +1,707 @@
+fileFormatVersion: 2
+guid: 9eba19145111e4a94a4cf8d4574b63b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3712701145784012435
+    second: MockPlayerSpriteSheet_Idle
+  - first:
+      213: -7631207157206920755
+    second: MockPlayerSpriteSheet_Walk
+  - first:
+      213: 6664031174996682602
+    second: MockPlayerSpriteSheet_Block
+  - first:
+      213: 4715112753375918161
+    second: MockPlayerSpriteSheet_Jump
+  - first:
+      213: -8542482240945055084
+    second: MockPlayerSpriteSheet_Fall
+  - first:
+      213: -5406725822170255096
+    second: MockPlayerSpriteSheet_Dash
+  - first:
+      213: -2391578559278432208
+    second: MockPlayerSpriteSheet_HitStun
+  - first:
+      213: -124688828779472144
+    second: MockPlayerSpriteSheet_7
+  - first:
+      213: 6053139012483443364
+    second: MockPlayerSpriteSheet_NJab
+  - first:
+      213: -4856225247417843583
+    second: MockPlayerSpriteSheet_FJab
+  - first:
+      213: -3188206882221439885
+    second: MockPlayerSpriteSheet_UJab
+  - first:
+      213: 3734309641647401854
+    second: MockPlayerSpriteSheet_DJab
+  - first:
+      213: -4651710176525139884
+    second: MockPlayerSpriteSheet_NSpecial
+  - first:
+      213: 3372270103675263264
+    second: MockPlayerSpriteSheet_AirNJab
+  - first:
+      213: -1429619583634143790
+    second: MockPlayerSpriteSheet_AirNSpecial
+  - first:
+      213: -5186512764577695279
+    second: MockPlayerSpriteSheet_15
+  - first:
+      213: 6339425368596722132
+    second: MockPlayerSpriteSheet_AirUJab
+  - first:
+      213: 6033317028047476181
+    second: MockPlayerSpriteSheet_AirUSpecial
+  - first:
+      213: -5037990475257897674
+    second: MockPlayerSpriteSheet_AirUFJab
+  - first:
+      213: 5662515278882464330
+    second: MockPlayerSpriteSheet_AirUFSpecial
+  - first:
+      213: -1568625081477218296
+    second: MockPlayerSpriteSheet_AirDFJab
+  - first:
+      213: 5489917106188530139
+    second: MockPlayerSpriteSheet_AirDFSpecial
+  - first:
+      213: 2555134339417180666
+    second: MockPlayerSpriteSheet_AirDJab
+  - first:
+      213: -4947973651128448585
+    second: MockPlayerSpriteSheet_23
+  - first:
+      213: 8525349960250462247
+    second: MockPlayerSpriteSheet_AirDSpecial
+  - first:
+      213: 3986715725565725506
+    second: MockPlayerSpriteSheet_EdgeGrab
+  - first:
+      213: 6787692922691282111
+    second: MockPlayerSpriteSheet_26
+  - first:
+      213: 7518533971129439800
+    second: MockPlayerSpriteSheet_27
+  - first:
+      213: 1698195138686447535
+    second: MockPlayerSpriteSheet_28
+  - first:
+      213: -3625750372498369553
+    second: MockPlayerSpriteSheet_29
+  - first:
+      213: -2671216793505985673
+    second: MockPlayerSpriteSheet_30
+  - first:
+      213: 7703026815944232211
+    second: MockPlayerSpriteSheet_31
+  - first:
+      213: -4188232112906525354
+    second: MockPlayerSpriteSheet_32
+  - first:
+      213: 2647104586704117813
+    second: MockPlayerSpriteSheet_33
+  - first:
+      213: 3493755148222278183
+    second: MockPlayerSpriteSheet_0
+  - first:
+      213: -3049579559312793027
+    second: MockPlayerSpriteSheet_1
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_Idle
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e44a7750a268330800000000000000
+      internalID: 3712701145784012435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_Walk
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 7161
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1534bb581881690800000000000000
+      internalID: -7631207157206920755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_Block
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 7161
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a676ecdcb056b7c50800000000000000
+      internalID: 6664031174996682602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_Jump
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158b2e441127f6140800000000000000
+      internalID: 4715112753375918161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_Fall
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a136079a1037980800000000000000
+      internalID: -8542482240945055084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_Dash
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8013c93c28377f4b0800000000000000
+      internalID: -5406725822170255096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_HitStun
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030c4c1b8f76fced0800000000000000
+      internalID: -2391578559278432208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_NJab
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa62276cd1110450800000000000000
+      internalID: 6053139012483443364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_FJab
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180406aedd83b9cb0800000000000000
+      internalID: -4856225247417843583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_UJab
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3744cb28bb631c3d0800000000000000
+      internalID: -3188206882221439885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_DJab
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ba5b775dee2d330800000000000000
+      internalID: 3734309641647401854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_NSpecial
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45046228d3ec17fb0800000000000000
+      internalID: -4651710176525139884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_AirNJab
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029db30dac5bcce20800000000000000
+      internalID: 3372270103675263264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_AirNSpecial
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d58b892098f82ce0800000000000000
+      internalID: -1429619583634143790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_AirUJab
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1be47f8c92af750800000000000000
+      internalID: 6339425368596722132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_AirUSpecial
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5d5120fd5aab350800000000000000
+      internalID: 6033317028047476181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_AirUFJab
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d937cea56751ab0800000000000000
+      internalID: -5037990475257897674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_AirUFSpecial
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42e20515ab459e40800000000000000
+      internalID: 5662515278882464330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_AirDFJab
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80048c0accf1b3ae0800000000000000
+      internalID: -1568625081477218296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_AirDFSpecial
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd135b0758a103c40800000000000000
+      internalID: 5489917106188530139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_AirDJab
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af90d5ed429a57320800000000000000
+      internalID: 2555134339417180666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_AirDSpecial
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7209e9e9e90205670800000000000000
+      internalID: 8525349960250462247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MockPlayerSpriteSheet_EdgeGrab
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 4093
+        width: 1024
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.7704594, y: 0.73069525}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b0fc274d8a35730800000000000000
+      internalID: 3986715725565725506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

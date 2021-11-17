@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b4aa4716701694c50b14b2d5f912cf09
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dashParticle: {fileID: 5175651764181301746, guid: 353f44a78896446bfb2edc859db9854c,
+      type: 3}
+  - stepParticle: {fileID: 3806722663340011716, guid: 133b3f0f3477e40e0b83f825efae299d,
+      type: 3}
+  - landParticle: {fileID: 8609651532565099763, guid: 1664bc5e32c7d476e8905be4845f028b,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

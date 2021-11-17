@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - PlayerAttribute
+  - Hard Platform
+  - Semisoft Platform
+  - Soft Platform
+  - Super Soft Platform
+  - 
+  - Left Edge
+  - RightEdge
+  - Player1
+  - Player2
+  - Player3
+  - Player4
+  - Player1jumpthrough
+  - Player2jumpthrough
+  - Player3jumpthrough
+  - Player4jumpthrough
+  - Shield
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Effects
+    uniqueID: 92532961
+    locked: 0

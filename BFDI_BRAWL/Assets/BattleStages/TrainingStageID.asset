@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b443cd11f9f4c41ecb9bbcb7938a7be3, type: 3}
+  m_Name: TrainingStageID
+  m_EditorClassIdentifier: 
+  sceneName: Training Stage
+  asset: {fileID: 850423811542498493, guid: 5371997da17b240b6ac9e670206c2812, type: 3}
+  playerPosition:
+  - {x: -60, y: 10, z: 0}
+  - {x: -40, y: 10, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  music: {fileID: 8300000, guid: 28259ea2acc9b40abb6fdc77f4969c12, type: 3}
+  skybox: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  fogColor: {r: 0, g: 0, b: 0, a: 255}
+  stageCenter: {x: -50, y: 0, z: 0}
+  boundsX: 25
+  boundsY: 18
+  boundsZ: 10

@@ -1,0 +1,39 @@
+{
+    "name": "MenuInputAction",
+    "maps": [
+        {
+            "name": "Menu",
+            "id": "aa1d15bb-980e-4e1f-b5bd-6fed85168c82",
+            "actions": [
+                {
+                    "name": "ControlPanel",
+                    "type": "Button",
+                    "id": "6b3e671c-5dda-4f63-bf41-250e943ae843",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "444be5d5-566f-4109-a0a0-754489148215",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Menu",
+                    "action": "ControlPanel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Menu",
+            "bindingGroup": "Menu",
+            "devices": []
+        }
+    ]
+}

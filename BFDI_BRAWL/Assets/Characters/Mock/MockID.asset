@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff69e4df8fd1bc042bb9912d64535791, type: 3}
+  m_Name: MockID
+  m_EditorClassIdentifier: 
+  characterName: Mock
+  center: {x: 0, y: 1.2, z: 0}
+  radius: 0.8
+  height: 2.4
+  walkSpeed: 10
+  walkAcceleration: 10
+  airAcceleration: 24
+  airFriction: 2
+  airSpeed: 24
+  jumpHeight: 7
+  gravity: -60
+  traction: 15
+  weight: 1
+  maxJumps: 2
+  jumpRate: 5
+  attackRate: 4
+  attackDistance: {x: 2, y: 3}
+  attackRange: 1.5
+  dashAcceleration: 18
+  isJumpingSnapped: 1
+  fastFallingPercentage: 70
+  spotDodgeFrames: 25
+  shieldMaxSize: 4
+  shieldMinSize: 0.1
+  uNeutral: {x: 3, y: 30, z: 105}
+  uAir: {x: 6, y: 20, z: 107}
+  uSmash: {x: 6, y: 10, z: 110}
+  uTilt: {x: 2, y: 40, z: 103}
+  jab: {x: 1.6, y: 30, z: 100.5}
+  fNeutral: {x: 7, y: 60, z: 106}
+  fAir: {x: 5, y: 70, z: 103}
+  fSmash: {x: 8, y: 50, z: 110}
+  fDash: {x: 7, y: 70, z: 107}
+  dTilt: {x: 2, y: 60, z: 103}
+  dNeutral: {x: 2, y: 90, z: 103}
+  dAir: {x: 2, y: 135, z: 105}
+  dSmash: {x: 5, y: 80, z: 107}
+  CharacterAssets:
+  - {fileID: 7572265467454026185, guid: d847df9f798e7b544bd65ea9e5145e53, type: 3}
