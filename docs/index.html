@@ -1,25 +1,90 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | BFBB_newSmashAttributes_20_12_19</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/BFBB_newSmashAttributes_20_12_19_2.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 1280px; height: 720px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">BFBB_newSmashAttributes_20_12_19</div>
-      </div>
-    </div>
-  </body>
+<html>
+    <head>
+        <title>BFDI: BRAWL Feature Test</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="favicon.png"/>
+        <style>
+            body{background-color: rgba(222, 230, 234, 0.779);}
+            .card{margin: 10px;}
+            .container{margin-top: 20px;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1><b>BFDI: BRAWL Feature Test Builds</b></h1>
+            <p><i>last updated: 31/10/2020 by smolpadok</i></p>
+            <p>Below are some builds of the game that you can play right from your web browser. The links will open a new tab with the respective build version in WebGL.</p>
+            <p>System Requirements:</p>
+            <ul>
+                <li>Only playable on a computer with keyboard and mouse</li>
+                <li>A modern CPU and GPU</li>
+            </ul>
+            <p>Want to share ideas, suggestions and feedback? Please visit the <a href="https://discord.gg/RnYC366">BFDI: BRAWL Discord server</a></p>
+            <a href="releasenotes.html">Release Notes</a>
+        </div>
+        <div class="container">
+            <h2><b>Stable Releases</b></h2>
+            <p>Less frequent builds that are sure to run well.</p>
+            <div class="row">
+                <div class="card" style="width: 18rem;">
+                    <img src="a19_9_2020.png" class="card-img-top" alt="a19_9_2020">
+                    <div class="card-body">
+                      <h5 class="card-title">a19_9_2020</h5>
+                      <p class="card-text">Improved Attack System, Camera and Simple UI</p>
+                      <a href="a19_9_2020/index.html" target="_blank" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="a9_5_2020.png" class="card-img-top" alt="a9_5_2020">
+                    <div class="card-body">
+                      <h5 class="card-title">a9_5_2020</h5>
+                      <p class="card-text">Shield Mechanics and Particle Effects</p>
+                      <a href="a9_5_2020/index.html" target="_blank" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="a28_3_2020.png" class="card-img-top" alt="a28_3_2020">
+                    <div class="card-body">
+                      <h5 class="card-title">a28_3_2020</h5>
+                      <p class="card-text">Several bugs and physics fixes from 18_3</p>
+                      <a href="a28_3_2020/index.html" target="_blank" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="a18_3_2020.png" class="card-img-top" alt="a18_3_2020">
+                    <div class="card-body">
+                      <h5 class="card-title">a18_3_2020</h5>
+                      <p class="card-text">Sprites, Cloud particles and new stage layout</p>
+                      <a href="a18_3_2020/index.html" target="_blank" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="a20_12_2019.png" class="card-img-top" alt="a20_12_2019">
+                    <div class="card-body">
+                      <h5 class="card-title">a20_12_2019</h5>
+                      <p class="card-text">Character Attributes to handle physics for every character</p>
+                      <a href="a20_12_2019/index.html" target="_blank" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="a19_12_2019.png" class="card-img-top" alt="a19_12_2019">
+                    <div class="card-body">
+                      <h5 class="card-title">a19_12_2019</h5>
+                      <p class="card-text">Starting BFDI: BRAWL V3. Player using character controller</p>
+                      <a href="a19_12_2019/index.html" target="_blank" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+            </div>
+            <h2><b>Experimental Releases</b></h2>
+            <p>Periodical builds to test cutting edge features. Will usually contain bugs or simply don't work.</p>
+            <ul>
+                <li>
+                    <a href="e11_10_2020/index.html" target="_blank">e11_10_2020</a>
+                    <p>Literally broken. Wanted to test the new custom bindings, but some preview components in the game caused the build to break. 
+                        <a href="https://youtu.be/8rStIhe88PQ" target="_blank">You can watch a recording though.</a></p>
+                </li>
+            </ul>
+        </div>
+    </body>
 </html>
