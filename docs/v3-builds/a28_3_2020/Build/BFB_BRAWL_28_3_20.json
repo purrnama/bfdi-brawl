@@ -1,0 +1,16 @@
+{
+"companyName": "SmolPadok",
+"productName": "BFB: BRAWL",
+"productVersion": "V3_Q1",
+"dataUrl": "BFB_BRAWL_28_3_20.data.unityweb",
+"wasmCodeUrl": "BFB_BRAWL_28_3_20.wasm.code.unityweb",
+"wasmFrameworkUrl": "BFB_BRAWL_28_3_20.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.5f1"
+}

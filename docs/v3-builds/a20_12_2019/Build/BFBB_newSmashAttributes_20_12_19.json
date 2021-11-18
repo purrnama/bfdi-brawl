@@ -1,0 +1,16 @@
+{
+"companyName": "SmolPadok",
+"productName": "BFBB_newSmashAttributes_20_12_19",
+"productVersion": "patch0001",
+"dataUrl": "BFBB_newSmashAttributes_20_12_19.data.unityweb",
+"wasmCodeUrl": "BFBB_newSmashAttributes_20_12_19.wasm.code.unityweb",
+"wasmFrameworkUrl": "BFBB_newSmashAttributes_20_12_19.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#000000",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.17f1"
+}

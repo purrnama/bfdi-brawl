@@ -1,0 +1,16 @@
+{
+"companyName": "SmolPadok",
+"productName": "Battle for BFDI Battle 0.1B",
+"productVersion": "0.1B",
+"dataUrl": "WebGL_newplayerattributes_19_12_19.data.unityweb",
+"wasmCodeUrl": "WebGL_newplayerattributes_19_12_19.wasm.code.unityweb",
+"wasmFrameworkUrl": "WebGL_newplayerattributes_19_12_19.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#000000",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.16f1"
+}
