@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
     float spotDodgeTime;
 
     //Smash Character Attributes
-    float walkAcceleration, jumpHeight, airAcceleration, airFriction, airSpeed, traction, dashAcceleration;
+    float walkSpeed, jumpHeight, airAcceleration, airFriction, airSpeed, traction, dashAcceleration;
     internal float attackRange, percentage, weight;
     internal float gravity;
     float knockbackScaling;
@@ -68,6 +68,8 @@ public class PlayerMovement : MonoBehaviour
 
     internal Vector3 controllerCenter;
     float controllerRadius, controllerHeight;
+
+    internal event Action OnRespawn;
 
     void Awake()
     {
@@ -95,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
             charControl.radius = controllerRadius;
             charControl.height = controllerHeight;
 
-            walkAcceleration = characterID.walkAcceleration;
+            walkSpeed = characterID.walkSpeed;
             jumpHeight = characterID.jumpHeight;
             gravity = characterID.gravity;
             airAcceleration = characterID.airAcceleration;
@@ -112,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
             dashAcceleration = characterID.dashAcceleration;
             weight = characterID.weight;
             spotDodgeFrames = characterID.spotDodgeFrames;
-            spotDodgeTime = spotDodgeFrames * Time.deltaTime;
+            spotDodgeTime = spotDodgeFrames * Time.fixedDeltaTime;
 
             uNeutral = characterID.uNeutral;
             uAir = characterID.uAir;
@@ -161,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
         if(!isGrounded){
             isLandSpawned = false;
         }
-
+        //Grounded
         if(isGrounded && verticalVelocity.y < 0){
             hasIntangibleEdge = false;
             hasAirDodge = false;
@@ -181,6 +183,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Horizontal input is pressed
         if(x != 0 && active && !hitstun && !isDodging && !isStunned && !attackLag && isAlive){
+            //When edge grabbing
             if(isEdgeGrab){
                 if(EdgeGrabOrient > 0 && x < 0){
                     jumpsMade = 10;
@@ -189,7 +192,7 @@ public class PlayerMovement : MonoBehaviour
                 }else if(EdgeGrabOrient > 0 && x > 0){
                     isEdgeGrab = false;
                     verticalVelocity.y = Mathf.Sqrt((charHeight * 1.5f) * -2f * gravity);
-                    horizontalVelocity.x = walkAcceleration * EdgeGrabOrient;
+                    horizontalVelocity.x = walkSpeed * EdgeGrabOrient;
                 }else if(EdgeGrabOrient < 0 && x > 0){
                     jumpsMade = 10;
                     isEdgeGrab = false;
@@ -197,41 +200,42 @@ public class PlayerMovement : MonoBehaviour
                 }else if(EdgeGrabOrient < 0 && x < 0){
                     isEdgeGrab = false;
                     verticalVelocity.y = Mathf.Sqrt((charHeight * 1.5f) * -2f * gravity);
-                    horizontalVelocity.x = walkAcceleration * EdgeGrabOrient;
+                    horizontalVelocity.x = walkSpeed * EdgeGrabOrient;
                 }
                 DisableIntangibility();
             }else{
                 if(isGrounded){
-                        horizontalVelocity = Vector3.right * x * walkAcceleration;
+                        horizontalVelocity = Vector3.right * x * walkSpeed;
                 }else{ // Inherits velocity from ground, limited by air speed
                     if(horizontalVelocity.x < airSpeed && horizontalVelocity.x > -airSpeed){
-                        horizontalVelocity += Vector3.right * x * airAcceleration * Time.deltaTime;
+                        horizontalVelocity += Vector3.right * x * airAcceleration * Time.fixedDeltaTime;
                     }
                 }
             }
         }else if(x == 0 && active && !hitstun && isAlive){
             if(isGrounded){
-                horizontalVelocity.x /= 1 + traction * Time.deltaTime;
+                horizontalVelocity.x /= 1 + traction * Time.fixedDeltaTime;
             }else{
-                horizontalVelocity.x /= 1 + airFriction * Time.deltaTime;
+                horizontalVelocity.x /= 1 + airFriction * Time.fixedDeltaTime;
             }
             isDashed = false;
         }
         if(!active){ //Allow friction even when inactive
             if(isGrounded){
-                horizontalVelocity.x /= 1 + traction * Time.deltaTime;
+                horizontalVelocity.x /= 1 + traction * Time.fixedDeltaTime;
             }else{
-                horizontalVelocity.x /= 1 + airFriction * Time.deltaTime;
+                horizontalVelocity.x /= 1 + airFriction * Time.fixedDeltaTime;
             }
         }
-
+        //Dashing
         if(isDashed && isGrounded){
             horizontalVelocity = Vector3.right * x * dashAcceleration;
         }
-        if(isShielding || isCharging){//Do not allow player to move when shielding or charging
+        //Do not allow player to move when shielding or charging
+        if(isShielding || isCharging){
             horizontalVelocity.x = 0f;
         }
-
+        //manipulate air speed and gravity in different conditions
         float airspeed = airSpeed;
         float grav = gravity;
         if(isFastFalling){
@@ -240,8 +244,9 @@ public class PlayerMovement : MonoBehaviour
         }
         //Gravity
         if(verticalVelocity.y > -airspeed && !isEdgeGrab){
-            verticalVelocity.y += grav * Time.deltaTime;
+            verticalVelocity.y += grav * Time.fixedDeltaTime;
         }
+        //Stop blast trail when falling
         if(verticalVelocity.y < 0){
             if(blastTrail.isEmitting){
                 blastTrail.Stop();
@@ -265,7 +270,6 @@ public class PlayerMovement : MonoBehaviour
                 gameObject.layer = LayerMask.NameToLayer("Player" + playerNumber);
             }
         }
-
         if(y < 0 && isAlive){
             if(isEdgeGrab){
                 isEdgeGrab = false;
@@ -459,7 +463,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Hitlag(float d){
         hitlag = true;
         anim.speed = 0f;
-        yield return new WaitForSeconds((d * 0.65f + 6f) * Time.deltaTime);
+        yield return new WaitForSeconds((d * 0.65f + 6f) * Time.fixedDeltaTime);
         hitlag = false;
         anim.speed = 1f;
     }
@@ -471,7 +475,7 @@ public class PlayerMovement : MonoBehaviour
         if(isShielding){
             DamageShield(d);
         }
-        yield return new WaitForSeconds((d * 0.65f + 6f) * Time.deltaTime);
+        yield return new WaitForSeconds((d * 0.65f + 6f) * Time.fixedDeltaTime);
         if(!isShielding){
             if(hitstun > 32){ //explosive launch
                 float horizLaunch = h * o;
@@ -491,7 +495,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetTrigger("HitStun");
         }
             hitstun = true;
-            float t = h * Time.deltaTime;
+            float t = h * Time.fixedDeltaTime;
             yield return new WaitForSeconds(t);
             hitstun = false;
     }
@@ -543,7 +547,7 @@ public class PlayerMovement : MonoBehaviour
         float a = Mathf.Clamp(air, 0, 300);
         float p = Mathf.Clamp(percentage, 0, 120);
         float f = (a * 0.2f + 64f) - (p * 44f / 120f); //Smash Ultimate calculation for intangibility time
-        float t = f * Time.deltaTime;
+        float t = f * Time.fixedDeltaTime;
         EnableIntangibility();
         yield return new WaitForSeconds(t);
         DisableIntangibility();
@@ -617,7 +621,7 @@ public class PlayerMovement : MonoBehaviour
         StartFlicker(2, Color.red);
         spawnLandParticle();
         verticalVelocity.y = 30f;
-        float stunTime = ((400 - percentage) + 60) * Time.deltaTime;
+        float stunTime = ((400 - percentage) + 60) * Time.fixedDeltaTime;
         stunCoroutine = StartCoroutine(Stun(stunTime));
     }
     internal void StopStun(){
@@ -667,6 +671,9 @@ public class PlayerMovement : MonoBehaviour
         horizontalVelocity = Vector3.zero;
         verticalVelocity = Vector3.zero;
         percentage = 0f;
+        if(OnRespawn != null){
+            OnRespawn();
+        }
     }
 
     //Draw gizmos to ease editor production

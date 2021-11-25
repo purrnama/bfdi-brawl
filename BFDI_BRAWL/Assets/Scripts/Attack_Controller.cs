@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,6 +9,7 @@ public class Attack_Controller : MonoBehaviour
 {
     PlayerMovement player;
     internal Moveset moveset;
+    internal event Action OnDamage;
     void Start(){
         player = GetComponent<PlayerMovement>();
     }
@@ -250,7 +253,7 @@ public class Attack_Controller : MonoBehaviour
 
     //Returns a knockback value if an attack is delivered. Based on SSB formula.
     float KnockbackValue(float percentage, float damage, float weight, float scaling, float baseknockback){
-        return ((((((percentage / 10f) + ((percentage * damage) / 20f)) * weight * 1.4f) + 18f) * scaling) + baseknockback);
+        return ((((((percentage / 10f) + ((percentage * damage) / 20f)) * (200f/ (weight+100)) * 1.4f) + 18f) * scaling) + baseknockback);
     }
     void SpawnHeavyBlastParticle(Vector3 position, Vector3 rotation){
         player.particle.SpawnHeavyBlastParticle(position, rotation);
@@ -279,13 +282,16 @@ public class Attack_Controller : MonoBehaviour
     IEnumerator Hitlag(float d){
         player.hitlag = true;
         player.anim.speed = 0f;
-        yield return new WaitForSeconds((d * 0.65f + 6f) * Time.deltaTime);
+        yield return new WaitForSeconds((d * 0.65f + 6f) * Time.fixedDeltaTime);
         player.hitlag = false;
         player.anim.speed = 1f;
     }
 
     //Called by the attacker to damage the opponent.
     void Damage(float angle, float knockback, int orient, float damage){
+        if (OnDamage != null) {
+            OnDamage();
+        }
         float radAngle = angle * Mathf.PI / 180;
         float horizV = knockback * Mathf.Sin(radAngle);
         float vertV = knockback * Mathf.Cos(radAngle);
@@ -315,6 +321,8 @@ public class Attack_Controller : MonoBehaviour
             PlayerMovement opp = opponent.GetComponent<PlayerMovement>();
             Vector3 effectAngle = new Vector3(0,0, (-type.y * state.x)); //get angle for blast effects
             float knockback = KnockbackValue(opp.percentage, type.x, opp.weight, (type.z / 100), type.x);
+            Debug.Log("Knockback: " + knockback);
+
             if(!opp.isShielding && !opp.isIntangible){
                 opp.percentage += type.x; //Add percentage first
             }

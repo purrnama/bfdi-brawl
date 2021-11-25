@@ -17,9 +17,6 @@ public class Character_ID : ScriptableObject {
 	[Tooltip("The max side speed of a character on the ground.")]
 	public float walkSpeed = 0f;
 
-	[Tooltip("How fast a character moves sideways on the ground.")]
-	public float walkAcceleration = 0f;
-
 	[Tooltip("How fast a character moves sideways in the air.")]
 	public float airAcceleration = 0f;
 

@@ -17,14 +17,13 @@ MonoBehaviour:
   radius: 0.8
   height: 2.4
   walkSpeed: 10
-  walkAcceleration: 10
   airAcceleration: 24
-  airFriction: 2
-  airSpeed: 24
-  jumpHeight: 7
+  airFriction: 3
+  airSpeed: 21
+  jumpHeight: 9
   gravity: -60
   traction: 15
-  weight: 1
+  weight: 77
   maxJumps: 2
   jumpRate: 5
   attackRate: 4
@@ -36,18 +35,19 @@ MonoBehaviour:
   spotDodgeFrames: 25
   shieldMaxSize: 4
   shieldMinSize: 0.1
-  uNeutral: {x: 3, y: 30, z: 105}
-  uAir: {x: 6, y: 20, z: 107}
+  grabRange: 0
+  uNeutral: {x: 8, y: 30, z: 105}
+  uAir: {x: 5, y: 20, z: 107}
   uSmash: {x: 6, y: 10, z: 110}
-  uTilt: {x: 2, y: 40, z: 103}
-  jab: {x: 1.6, y: 30, z: 100.5}
+  uTilt: {x: 7, y: 40, z: 103}
+  jab: {x: 1.7, y: 30, z: 100.5}
   fNeutral: {x: 7, y: 60, z: 106}
-  fAir: {x: 5, y: 70, z: 103}
-  fSmash: {x: 8, y: 50, z: 110}
-  fDash: {x: 7, y: 70, z: 107}
-  dTilt: {x: 2, y: 60, z: 103}
+  fAir: {x: 1.7, y: 70, z: 103}
+  fSmash: {x: 14, y: 50, z: 110}
+  fDash: {x: 6, y: 70, z: 107}
+  dTilt: {x: 8, y: 60, z: 103}
   dNeutral: {x: 2, y: 90, z: 103}
-  dAir: {x: 2, y: 135, z: 105}
-  dSmash: {x: 5, y: 80, z: 107}
+  dAir: {x: 1.3, y: 135, z: 105}
+  dSmash: {x: 14, y: 80, z: 107}
   CharacterAssets:
   - {fileID: 7572265467454026185, guid: d847df9f798e7b544bd65ea9e5145e53, type: 3}
