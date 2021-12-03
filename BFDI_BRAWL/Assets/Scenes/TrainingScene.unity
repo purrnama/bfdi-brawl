@@ -2131,7 +2131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &521674674
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2139,18 +2139,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521674673}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1115149697}
-  m_Father: {fileID: 1455596114}
-  m_RootOrder: 3
+  m_Father: {fileID: 1146161319}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -95, y: 26}
-  m_SizeDelta: {x: 159.81912, y: 36.937775}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 159.8191, y: 55.3614}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &521674675
 MonoBehaviour:
@@ -3304,16 +3304,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'BFDI: BRAWL e29_11_2020
-
-    Feel free to report issues at the Discord
-    server.
-
-    If the game breaks please refresh the browser.
+  m_text: 'BFDI: BRAWL pre-alpha build (25_11_2021)
 
 
-    Press backspace
-    to open player controls.'
+    Press backspace to open
+    player controls.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d5a3c9c50969d941978f47c483408a0, type: 2}
   m_sharedMaterial: {fileID: 21288372493782142, guid: 2d5a3c9c50969d941978f47c483408a0,
@@ -3655,7 +3650,7 @@ RectTransform:
   - {fileID: 1574059521}
   - {fileID: 1985149933}
   m_Father: {fileID: 1455596114}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4072,6 +4067,79 @@ MonoBehaviour:
   minZoomOrt: 16
   zoomInSpeed: 5
   zoomOutSpeed: 70
+--- !u!1 &1146161318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1146161319}
+  - component: {fileID: 1146161321}
+  - component: {fileID: 1146161320}
+  m_Layer: 5
+  m_Name: PercentagePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1146161319
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146161318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1774220388}
+  - {fileID: 521674674}
+  m_Father: {fileID: 1455596114}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 43.755325}
+  m_SizeDelta: {x: -25.4865, y: 72.4386}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1146161320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146161318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 15
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 20
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!222 &1146161321
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146161318}
+  m_CullTransparentMesh: 1
 --- !u!1 &1231825274
 GameObject:
   m_ObjectHideFlags: 0
@@ -4800,10 +4868,9 @@ RectTransform:
   m_Children:
   - {fileID: 904834206}
   - {fileID: 673098594}
-  - {fileID: 1774220388}
-  - {fileID: 521674674}
   - {fileID: 1092092778}
   - {fileID: 2131872730}
+  - {fileID: 1146161319}
   m_Father: {fileID: 437366225}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5996,7 +6063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1774220388
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6004,18 +6071,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774220387}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 455064733}
-  m_Father: {fileID: 1455596114}
-  m_RootOrder: 2
+  m_Father: {fileID: 1146161319}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -255, y: 26}
-  m_SizeDelta: {x: 159.81912, y: 36.937775}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 159.8191, y: 55.3614}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1774220389
 MonoBehaviour:
@@ -7169,7 +7236,7 @@ RectTransform:
   m_Children:
   - {fileID: 1590113896}
   m_Father: {fileID: 1455596114}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

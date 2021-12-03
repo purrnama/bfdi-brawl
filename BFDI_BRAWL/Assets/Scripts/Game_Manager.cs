@@ -40,7 +40,7 @@ public class Game_Manager : MonoBehaviour
     [SerializeField] internal float blastLineRange = 0;
     [SerializeField] GameObject controlPanel;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         if(debug_prepareScene){
@@ -51,7 +51,6 @@ public class Game_Manager : MonoBehaviour
         inputAction = new MenuInputAction();
         inputAction.Menu.ControlPanel.performed += ctx => ControlPanel();
     }
-    // Update is called once per frame
     void Update()
     {
         roundTime += Time.deltaTime;
@@ -60,10 +59,6 @@ public class Game_Manager : MonoBehaviour
         }
         /*
         UpdateIndicators();
-        for (int i = 0; i < currentPlayers.Count; i++){
-            CheckBlast(i);
-            UpdateUI(i);
-        }
         */
     }
     void ControlPanel(){
@@ -88,11 +83,6 @@ public class Game_Manager : MonoBehaviour
             PlayerInput input = currentPlayers[i].GetComponent<PlayerInput>();
             InputUser.PerformPairingWithDevice(Keyboard.current, input.user, InputUserPairingOptions.None);
         }
-    }
-    void UpdateUI(int i){ //fetch player data and update interface
-        float percent = currentPlayers[i].percentage;
-        string displayPercent = String.Format("{0:F1}%", percent);
-        currentPercentages[i].text = (displayPercent);
     }
     void CalculateBounds(){
         Vector3 focusPosition = focus.transform.position;
@@ -223,6 +213,7 @@ public class Game_Manager : MonoBehaviour
     void OnDisable(){
         inputAction.Disable();
     }
+    //Draw gizmos for camera debugging
     void OnDrawGizmos(){
         //stagebounds = green box
         //cambounds = yellow box
