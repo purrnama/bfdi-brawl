@@ -1,4 +1,4 @@
-This is read from a HTTP server! After a year-long college hiatus, developments for BFDI: BRAWL have restarted.
+BFDI: BRAWL is back!|This is read from a HTTP server! After a year-long college hiatus, developments for BFDI: BRAWL have restarted.
 
 BFDI: BRAWL is taking a new open direction as a general object show smash game, with tools and frameworks designed to help YOU mod your own characters into the game!
 
