@@ -2,7 +2,7 @@
     "name": "MenuInputAction",
     "maps": [
         {
-            "name": "Menu",
+            "name": "UI",
             "id": "aa1d15bb-980e-4e1f-b5bd-6fed85168c82",
             "actions": [
                 {

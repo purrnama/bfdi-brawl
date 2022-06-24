@@ -131,6 +131,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -140,8 +142,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -162,9 +164,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
@@ -699,6 +704,30 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      MockPlayerSpriteSheet_EdgeGrab: 3986715725565725506
+      MockPlayerSpriteSheet_Dash: -5406725822170255096
+      MockPlayerSpriteSheet_Fall: -8542482240945055084
+      MockPlayerSpriteSheet_HitStun: -2391578559278432208
+      MockPlayerSpriteSheet_AirDFSpecial: 5489917106188530139
+      MockPlayerSpriteSheet_AirDSpecial: 8525349960250462247
+      MockPlayerSpriteSheet_NJab: 6053139012483443364
+      MockPlayerSpriteSheet_AirNSpecial: -1429619583634143790
+      MockPlayerSpriteSheet_AirDJab: 2555134339417180666
+      MockPlayerSpriteSheet_NSpecial: -4651710176525139884
+      MockPlayerSpriteSheet_Walk: -7631207157206920755
+      MockPlayerSpriteSheet_AirUSpecial: 6033317028047476181
+      MockPlayerSpriteSheet_Jump: 4715112753375918161
+      MockPlayerSpriteSheet_UJab: -3188206882221439885
+      MockPlayerSpriteSheet_DJab: 3734309641647401854
+      MockPlayerSpriteSheet_AirUFJab: -5037990475257897674
+      MockPlayerSpriteSheet_AirUFSpecial: 5662515278882464330
+      MockPlayerSpriteSheet_Idle: 3712701145784012435
+      MockPlayerSpriteSheet_Block: 6664031174996682602
+      MockPlayerSpriteSheet_FJab: -4856225247417843583
+      MockPlayerSpriteSheet_AirNJab: 3372270103675263264
+      MockPlayerSpriteSheet_AirDFJab: -1568625081477218296
+      MockPlayerSpriteSheet_AirUJab: 6339425368596722132
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

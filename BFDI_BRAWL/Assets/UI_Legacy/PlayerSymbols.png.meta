@@ -210,7 +210,7 @@ TextureImporter:
       213: 21300136
     second: PlayerSymbols_0
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -230,6 +230,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -238,12 +240,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -261,9 +263,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1751,6 +1757,76 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Basketball: 21300006
+      Grassy: 21300050
+      Marker: 21300080
+      Saw: 21300112
+      Donut: 21300034
+      Tree: 21300126
+      Golf Ball: 21300066
+      Black Hole: 21300010
+      Teardrop: 21300122
+      Balloony: 21300002
+      Book: 21300016
+      Lollipop: 21300076
+      Needle: 21300086
+      Gelatin: 21300064
+      Bracelety: 21300020
+      Leafy: 21300070
+      Lightning: 21300072
+      Taco: 21300120
+      Clock: 21300026
+      TV: 21300128
+      Firey: 21300044
+      Firey Jr: 21300046
+      Eraser: 21300040
+      Fanny: 21300042
+      Spongy: 21300116
+      Stapy: 21300118
+      Pencil: 21300092
+      Flower: 21300056
+      Naily: 21300084
+      PlayerSymbols_0: 21300136
+      Dora: 21300036
+      Match: 21300082
+      Bubble: 21300022
+      Woody: 21300130
+      Nickle: 21300088
+      Fries: 21300060
+      Rocky: 21300108
+      8-Ball: 21300000
+      Pillow: 21300096
+      Yellow Face: 21300132
+      Liy: 21300074
+      Loser: 21300078
+      Robot Flower: 21300104
+      Barf Bag: 21300004
+      Snowball: 21300114
+      .: 21300052
+      Cake: 21300024
+      Remote: 21300102
+      Pen: 21300090
+      Puffball: 21300100
+      Bottle: 21300018
+      Bomby: 21300014
+      David: 21300032
+      .1: 21300048
+      Pin: 21300098
+      Ice Cube: 21300068
+      Bell: 21300008
+      Roboty: 21300106
+      Foldy: 21300058
+      Tennis Ball: 21300124
+      PlayerSymbols_27: 21300054
+      Cloudy: 21300028
+      Ruby: 21300110
+      Eggy: 21300038
+      Blocky: 21300012
+      Coiny: 21300030
+      Gatey: 21300062
+      .2: 21300134
+      Pie: 21300094
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

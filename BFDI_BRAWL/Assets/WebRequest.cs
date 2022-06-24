@@ -8,12 +8,10 @@ public class WebRequest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GetText());
+        //StartCoroutine(GetText());
     }
-    public void GetRequest(){
-        StartCoroutine(GetText());
-    }
-    IEnumerator GetText(){
+    public IEnumerator GetText(){
+        string update;
         UnityWebRequest www = UnityWebRequest.Get("https://smolpadok.github.io/bfdi-brawl/update.txt");
         yield return www.SendWebRequest();
 
@@ -21,7 +19,7 @@ public class WebRequest : MonoBehaviour
             Debug.LogWarning(www.error);
         }
         else{
-            Debug.Log(www.downloadHandler.text);
+            update = www.downloadHandler.text;
         }
     }
 }

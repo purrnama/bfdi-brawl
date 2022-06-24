@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class TransitionController : MonoBehaviour
@@ -13,14 +14,19 @@ public class TransitionController : MonoBehaviour
         parent = gameObject.transform.parent;
         SplashScreenController splash = parent.GetComponent<SplashScreenController>();
         if (splash != null){
-            splash.OnStartInitialize += StartTranstition;
-            splash.OnFinishInitialize += EndTranstition;
+            splash.OnStartInitialize += StartTransition;
+            splash.OnFinishInitialize += EndTransition;
         }
     }
-    void StartTranstition(){
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode){
+        EndTransition();
+    }
+
+    void StartTransition(){
         anim.SetTrigger("Start");
     }
-    void EndTranstition(){
+    void EndTransition(){
         anim.SetTrigger("End");
     }
 }

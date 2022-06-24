@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class LoadingController : MonoBehaviour
@@ -16,6 +17,10 @@ public class LoadingController : MonoBehaviour
             splash.OnStartInitialize += ShowLoading;
             splash.OnFinishInitialize += EndLoading;
         }
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode){
+        EndLoading();
     }
     void ShowLoading(){
         anim.SetTrigger("Show");
