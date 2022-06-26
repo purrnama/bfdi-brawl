@@ -23,10 +23,10 @@ public class TransitionController : MonoBehaviour
         EndTransition();
     }
 
-    void StartTransition(){
+    public void StartTransition(){
         anim.SetTrigger("Start");
     }
-    void EndTransition(){
+    public void EndTransition(){
         anim.SetTrigger("End");
     }
 }
